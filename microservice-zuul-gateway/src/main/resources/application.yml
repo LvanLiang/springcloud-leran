@@ -1,0 +1,29 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: microservice-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: microservice-zuul-9527 #自定义服务名称信息
+    prefer-ip-address: true
+
+zuul:
+  prefix: /liang         #多个统一前缀
+  ignored-services: "*"  #原真实服务名忽略，多个用*
+  routes:
+    mydept.serviceId: microservice-provider
+    mydept.path: /myac/**
+
+
+
+info:
+  app.name: liang-microcloud
+  company.name: www.liang.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
