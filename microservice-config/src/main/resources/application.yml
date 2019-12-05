@@ -1,0 +1,22 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: microservice-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/.liang/microservice-config.git #GitHub上面的git仓库名字
+          username: your account
+          password: your password
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+    enabled: true
+  instance:
+    instance-id: microservice-config #自定义服务名称信息
+    prefer-ip-address: true  #访问路径可以显示IP地址
