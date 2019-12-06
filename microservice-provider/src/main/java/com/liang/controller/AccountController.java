@@ -34,6 +34,11 @@ public class AccountController {
         return accountService.findList();
     }
 
+    @GetMapping("/listUser/{unitId}")
+    public List<Account> listUser(@PathVariable("unitId") String unitId){
+        return accountService.listUser(unitId);
+    }
+
     @PostMapping("/add")
     public int add(@RequestBody  Account account){
         return accountService.add(account);

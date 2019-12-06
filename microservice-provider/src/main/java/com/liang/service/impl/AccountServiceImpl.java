@@ -33,4 +33,9 @@ public class AccountServiceImpl implements AccountService {
     public List<Account> findList() {
         return accoutMapper.findList();
     }
+
+    @Override
+    public List<Account> listUser(String unitId) {
+        return accoutMapper.listUser(unitId);
+    }
 }

@@ -17,4 +17,6 @@ public interface AccountService {
     Account findById(Integer id);
 
     List<Account> findList();
+
+    List<Account> listUser(String unitId);
 }

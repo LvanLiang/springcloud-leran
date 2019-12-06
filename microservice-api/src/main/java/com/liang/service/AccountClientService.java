@@ -17,11 +17,14 @@ import java.util.List;
 @FeignClient(value = "MICROSERVICE-PROVIDER",fallback=AccountClientServiceImpl.class)
 public interface AccountClientService {
     @PostMapping("/account/add")
-    public int add(Account account);
+    int add(Account account);
 
     @GetMapping("/account/findById/{id}")
-    public Account findById(@PathVariable("id") Integer id);
+    Account findById(@PathVariable("id") Integer id);
 
     @GetMapping("/account/findList")
-    public List<Account> findList();
+    List<Account> findList();
+
+    @GetMapping("/account/listUser/{unitId}")
+    List<Account> listUser(@PathVariable("unitId") String unitId);
 }

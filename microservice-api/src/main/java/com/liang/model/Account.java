@@ -14,6 +14,7 @@ import java.io.Serializable;
 @Accessors(chain=true)
 public class Account implements Serializable {
     private Integer id;
+    private String userId;
     private String name;
     private Double money;
 }

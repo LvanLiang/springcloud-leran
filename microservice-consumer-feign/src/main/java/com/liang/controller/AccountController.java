@@ -35,4 +35,9 @@ public class AccountController {
     public List<Account> findList(){
         return accountClientService.findList();
     }
+
+    @GetMapping("/listUser/{unitId}")
+    public List<Account> listUser(@PathVariable("unitId") String unitId){
+        return accountClientService.listUser(unitId);
+    }
 }

@@ -17,4 +17,8 @@
 		select * from account
 	</select>
 
+	<select id="listUser" resultType="Account">
+		select user_id, name, unit_id money from base_user where unit_id = #{unitId}
+	</select>
+
 </mapper>

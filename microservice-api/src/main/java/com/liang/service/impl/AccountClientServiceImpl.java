@@ -33,4 +33,9 @@ public class AccountClientServiceImpl implements AccountClientService {
     public List<Account> findList() {
         return null;
     }
+
+    @Override
+    public List<Account> listUser(String unitId) {
+        return null;
+    }
 }

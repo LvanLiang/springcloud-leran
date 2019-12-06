@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: microservice-zuul-gateway
+  zipkin:
+    base-url: http://localhost:9411
 
 eureka:
   client:
@@ -14,16 +16,17 @@ eureka:
     prefer-ip-address: true
 
 zuul:
-  prefix: /liang         #多个统一前缀
+  prefix: /api         #多个统一前缀
   ignored-services: "*"  #原真实服务名忽略，多个用*
   routes:
-    mydept.serviceId: microservice-provider
-    mydept.path: /myac/**
+    api.serviceId: microservice-consumer-feign
+    api.path: /**
+
 
 
 
 info:
-  app.name: liang-microcloud
+  app.name: liang-zuul-microcloud
   company.name: www.liang.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
