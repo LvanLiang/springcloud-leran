@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-zipkin</artifactId>
-
+    <artifactId>microservice-admin-server</artifactId>
 
     <dependencies>
         <dependency>
@@ -23,26 +22,18 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!--Spring Boot Admin 客户端-->
+        <!--服务链路追踪监控-->
         <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
 
+        <!--Spring Boot Admin Server-->
         <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin</artifactId>
-            <version>2.10.1</version>
-        </dependency>
-        <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin-server</artifactId>
-            <version>2.10.1</version>
-        </dependency>
-        <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin-autoconfigure-ui</artifactId>
-            <version>2.10.1</version>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <version>2.0.0</version>
         </dependency>
     </dependencies>
+
 </project>

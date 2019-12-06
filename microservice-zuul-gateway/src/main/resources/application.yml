@@ -6,6 +6,10 @@ spring:
     name: microservice-zuul-gateway
   zipkin:
     base-url: http://localhost:9411
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
 
 eureka:
   client:
@@ -28,5 +32,5 @@ zuul:
 info:
   app.name: liang-zuul-microcloud
   company.name: www.liang.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build.artifactId: microservice-zuul-gateway
+  build.version: 1.0

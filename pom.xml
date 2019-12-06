@@ -17,6 +17,7 @@
     <module>microservice-config</module>
     <module>microservice-config-client</module>
     <module>microservice-zipkin</module>
+    <module>microservice-admin-server</module>
   </modules>
   <packaging>pom</packaging>
   <name>microservice</name>
@@ -80,6 +81,12 @@
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
         <version>${log4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.codecentric</groupId>
+        <artifactId>spring-boot-admin-starter-client</artifactId>
+        <version>2.0.0</version>
       </dependency>
     </dependencies>
 

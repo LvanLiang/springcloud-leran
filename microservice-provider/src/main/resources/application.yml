@@ -21,6 +21,10 @@ spring:
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
    zipkin:
      base-url: http://localhost:9411
+   boot:
+     admin:
+       client:
+         url: http://localhost:8084
 
 
 eureka:
@@ -34,6 +38,6 @@ eureka:
 info:
   app.name: liang-microservicecloud
   company.name: www.liang.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build.artifactId: microservice-provider
+  build.version: 1.0
 
